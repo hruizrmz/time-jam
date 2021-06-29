@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/scripts/sc_control.rpy", line 8, in script call
+    call sc00_main
+  File "game/scripts/sc_control.rpy", line 8, in script call
+    call sc00_main
+ScriptError: could not find label 'sc00_main'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/scripts/sc_control.rpy", line 8, in script call
+    call sc00_main
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 1484, in execute
+    rv = renpy.game.context().call(label, return_site=self.next.name)
+  File "game/scripts/sc_control.rpy", line 8, in script call
+    call sc00_main
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/script.py", line 918, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'sc00_main'.
+
+Darwin-17.7.0-x86_64-i386-64bit
+Ren'Py 7.4.6.1693
+untitled 1.0
+Tue Jun 29 00:22:13 2021
