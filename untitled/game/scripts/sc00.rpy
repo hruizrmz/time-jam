@@ -1,12 +1,21 @@
 # Test scene
+define s = Character("Sprite")
+define mc = Character("MC", image = "komaeda/mc.png")
 
 label sc00_main:
     # for backgrounds
+    $ quick_menu = False
+    scene black
+    with fade
+    $ renpy.pause (2, hard=True)
+
     scene bg room
-    with dissolve
+    with fade
     play music test
+    $ renpy.pause (1, hard=True)
 
     # for character sprites
+    $ quick_menu = True
     show sprite at halfleft
     with moveinleft
     s "You've created a new Ren'Py game!"

@@ -11,6 +11,8 @@ init offset = -2
 init python:
     gui.init(1280, 720)
 
+    renpy.block_rollback()
+
 
 
 ################################################################################
@@ -470,6 +472,3 @@ init python:
 
         gui.nvl_button_width = 1240
         gui.nvl_button_xpos = 20
-
-
-

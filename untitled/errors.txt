@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at File "game/scripts/sc_control.rpy", line 6:
-label start:
-and File "game/scripts/scripts.rpyc", line 6:
-label start:
-
+File "game/scripts/screens.rpy", line 327: vbox expects a non-empty block.
+    if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                                                                                     ^
 
 Ren'Py Version: Ren'Py 7.4.6.1693
-Tue Jun 29 00:21:32 2021
+Wed Jun 30 21:13:35 2021
