@@ -9,14 +9,14 @@ label sc00_main:
     with fade
     $ renpy.pause (2, hard=True)
 
-    scene bg room
+    scene bg_room
     with fade
     play music test
     $ renpy.pause (1, hard=True)
 
     # for character sprites
     $ quick_menu = True
-    show sprite at halfleft
+    show s at halfleft
     with moveinleft
     s "You've created a new Ren'Py game!"
     show mc happy at halfright

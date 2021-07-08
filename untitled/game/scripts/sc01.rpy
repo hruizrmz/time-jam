@@ -1,17 +1,16 @@
 # Introductory scene
-
-#define mc = Character("MC", image = "mc/default.png")
-define mc = Character("MC")
-
 label sc01_main:
     $ quick_menu = False
     scene black
     with fade
+    play music test
     $ renpy.pause (1, hard=False)
 
     # dialogue starts
     $ quick_menu = True
     # screen especial para definir el ambiente "Nueva York, 1928"
+    show scene1_alley
+    with Dissolve(2)
     # bg de basureros
     # sonido de sirenas y gente corriendo mientras pisa charcos
     "Policía" "¡Alto ahí! ¡No tienes a dónde huir!"
@@ -23,7 +22,7 @@ label sc01_main:
     "... Creo que mi única opción es ir con mi hermano ABOGADO."
     "El es el mejor abogado que conozco. Si hay alguien que pueda ayudarme, es él!"
     $ quick_menu = False
-    $ renpy.pause (1, hard=False)
+    $ renpy.pause (2, hard=False)
 
     # cambio de escena a una calle, lloviendo
     $ quick_menu = True
@@ -56,11 +55,11 @@ label sc01_loop:
     else:
         mc "Argh, qué idiotez... tengo que pensar en algo mejor."
     menu:
-        "Acercarse al oficial sigilosamente y noquearlo por atrás."
+        "Acercarse al oficial sigilosamente y noquearlo por atrás.":
             jump sc01_l1
         "Esperar a que el oficial se distraiga y se salga del callejón.":
             jump sc01_l2
-        "Golpear al oficial con la tapa del basurero en la cabeza.":
+        "Golpear al oficial con la tapa del basurero en la cabeza." if first_loop == False:
             jump sc01_w
 
 label sc01_l1:
@@ -91,11 +90,10 @@ label sc01_l2:
 label sc01_w:
     $ first_loop = False
 
-    ## El policía se acerca a donde estaba escondidos y el MC lo toma por sorpres
+    ## El policía se acerca a donde estaban escondidos y el MC lo toma por sorpresa
     ## El golpe fue lo suficientemente duro como para noquearlo
     ## De ahí, hay una transición a la escena con el hermano/Abogado
 
-    #
     jump sc01_afterloop
 
 label sc01_afterloop:
