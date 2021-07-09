@@ -1,104 +1,111 @@
-# Introductory scene
+## INTRO SCENE
 label sc01_main:
     $ quick_menu = False
     scene black
     with fade
-    play music test
-    $ renpy.pause (1, hard=False)
+    $ renpy.pause (1, hard=True)
+
+    show scene1_alley
+    with Dissolve(2)
+    play music calm
+    window show
+    n """
+    The Moon Bar's a nice small place, adorned by a yellow light
+
+    A shelf at the back displays bottles of all sizes
+
+    And there's a noticeable lack of cleaning...
+
+    But the cozy and calm ambience make up for it
+    """
+    window hide
+    nvl clear
 
     # dialogue starts
     $ quick_menu = True
-    # screen especial para definir el ambiente "Nueva York, 1928"
-    show scene1_alley
-    with Dissolve(2)
-    # bg de basureros
-    # sonido de sirenas y gente corriendo mientras pisa charcos
-    "Policía" "¡Alto ahí! ¡No tienes a dónde huir!"
-    # aparece el sprite del MC, las expresiones se pueden definir una por una
-    mc "Argh, ¿qué demonios está pasando?"
-    "No sé a dónde ir... ¿cómo llego a dar ese cadáver a mi apartamento?"
-    "No tengo tiempo para decirles que soy inocente; pensarán que estoy loco..."
-    "Este olor a basura es intolerable, tengo que huir de aquí."
-    "... Creo que mi única opción es ir con mi hermano ABOGADO."
-    "El es el mejor abogado que conozco. Si hay alguien que pueda ayudarme, es él!"
+    a "I'm sorry, what did you say?"
+    bm "The time, sir... It's past 2 a.m. You've been asleep for a while."
+    bm "We are about to close for the evening so I humbly ask for you to leave."
+    a "Of course..."
+    a "Here, have this. I apologize for the inconvenience."
+    bm "Oh, it's alright, sir."
+    a "I insist."
+    bm "Well, thank you very much! Should I help you to the exit?"
+    a "That won't be necessary. I can manage on my own."
+    "I say that and yet I almost fell on my ass as I stood up..."
+
+    # scene transition here, fuera del bar
+    window show
+    n """
+    Arthur lit up a cigar and observed the dark sky for a moment
+
+    The night was illuminated by stars and flickering street lamps
+
+    Perfect for walking a couple blocks and showing the way back home
+    """
+    window hide
+    nvl clear
+    stop music fadeout 1.0
+    scene black
+    with fade
+    # secuencia/animacion aqui?
+
+    # scene transition, negro o fuera del apartamento
+    a "Damn it... I hate being on the third floor."
+    a "The rent is not worth tripping on all these stairs"
+    $ renpy.pause (0.5, hard=False)
+    # sfx de llave abriendo un candado
+    # sfx de puerta rechinando
+    # scene transition, apartamento oscuro
+    a "Huh, it's quiet in here... What happened to that annoying leak?"
+    a "The chairs are out of place too. Was I already drunk before getting to the bar?"
     $ quick_menu = False
-    $ renpy.pause (2, hard=False)
-
-    # cambio de escena a una calle, lloviendo
+    # show clickable lamp to turn on the lights
+    # immediate scene change to apt with body
     $ quick_menu = True
-    "Si mal no recuerdo, aún tengo su tarjeta de negocios en mi cartera."
-    mc "...Justo lo que me faltaba; su oficina está hasta el otro lado de la ciudad."
-    "Tendré que ser cuidadoso para que nadie me reconozca."
-    "Policía" "Oye tú, ¡¿qué haces aquí?!"
-    "¡Maldición! Está sosteniendo mi hombro con demasiada fuerza."
-    "... Juré jamás volver a hacer esto, pero parece que no tengo alternativa."
-    "Si me capturan tratando de huir de la escena del crimen será el fin para mí."
-    "Policía" "¡Deja de resistir! ¡Quedas bajo arresto!"
-    "Parece que no tengo opción. Vamos, ¡tengo que concentrarme!"
-    # comienza mini juego para regresar al pasado (o el mini tutorial)
-    # podría ser más bien una animación
+    a ". . ."
+    # show scared arthur sprite, sfx of loud thud
+    $ quick_menu = False
+    play music som
+    window show
+    n """
+    As Arthur fell to the ground, he lost his composure
 
-    # la escena regresa a los basureros
-    mc "Eso estuvo demasiado cerca."
-    "De verdad que no había hecho esto en mucho tiempo."
-    "No desde el último incidente que tuve con AMIGO..."
-    mc "..."
-    "Bueno, basta de eso. Tengo que encontrar a ABOGADO."
+    A scream that carried both fright and pain rang through the hallway
 
-    # comienza el loop del cap1
-    $ first_loop = True
-    jump sc01_loop
+    This was reality; he had found a corpse inside his apartment
+    """
+    window hide
+    nvl clear
+    $ renpy.pause (0.5, hard=False)
+    $ quick_menu = True
+    a "God..."
+    "I can hardly breathe. This is just insane."
+    "... Get it together. I should take a closer look."
 
-label sc01_loop:
-    if first_loop:
-        mc "¿Cómo puedo escapar de este callejón sin que me atrapen?"
-    else:
-        mc "Argh, qué idiotez... tengo que pensar en algo mejor."
-    menu:
-        "Acercarse al oficial sigilosamente y noquearlo por atrás.":
-            jump sc01_l1
-        "Esperar a que el oficial se distraiga y se salga del callejón.":
-            jump sc01_l2
-        "Golpear al oficial con la tapa del basurero en la cabeza." if first_loop == False:
-            jump sc01_w
+    $ quick_menu = False
+    # close up of body
+    # show clickable bag
+    # transition bag image to opened
+    # show clickable plush
+    $ quick_menu = True
+    # plush: 'The tag says "Doorbell Toys".'
+    a "... Who is this person?"
+    $ renpy.pause (0.5, hard=True)
+    "Neighbor" "What do you think you're doing!? You're going to wake up the whole damn building..!"
+    "Neighbor" "Don't even get me started on the ti-- Oh, Christ!"
+    "Shit, she noticed the body. I probably shouldn't be holding this bloody purse either."
+    "What's she running to the window for..?"
+    "Neighbor" "Help! Police! There's been a murder!"
+    # sfx whistle
+    "Policeman" "Quick, go call for some backup!"
+    a "Ah..."
+    "I can't really blame her. I'm scared to death myself."
+    "Quick, focus! Are there any other clues?"
+    # show clickable perfume
+    # perfume: the odd shape and smell match its extravagant name, "Arbre Bleu"
 
-label sc01_l1:
-    $ first_loop = False
-    "Intentaré noquear a ese oficial de ahí. No parece ser muy fuerte entonces será fácil."
-    "Con... cuidado..."
-    $ renpy.pause (1, hard=True)
-    "Ya casi..."
-    $ renpy.pause (1, hard=True)
-    mc "¡Te tengo!"
-    "Policía" "¡AH! ¡SUÉLTAME CRIMINAL!"
-    # gun shot
-    "Antes de que pudiera reaccionar, recibí un balazo en el pie."
-    mc "¡M****A!"
-    "Ese hombre no es nada fuerte, pero si que tiene buenos reflejos..."
-    # transicion de viaje en el tiempo express wooosh
-    jump sc01_loop
-
-label sc01_l2:
-    $ first_loop = False
-
-    ## el MC se tropieza al tratar de salir de entre los basureros y hace ruido
-    ## esto alerta al policía, haciendo que regrese al callejón y lo espose
-
-    # transicion de viaje en el tiempo express wooosh
-    jump sc01_loop
-
-label sc01_w:
-    $ first_loop = False
-
-    ## El policía se acerca a donde estaban escondidos y el MC lo toma por sorpresa
-    ## El golpe fue lo suficientemente duro como para noquearlo
-    ## De ahí, hay una transición a la escena con el hermano/Abogado
-
-    jump sc01_afterloop
-
-label sc01_afterloop:
-    ## diálogo con el hermano
-
-    ## lo vuelven a atrapar y se muestra el titulo del juego al final (señalando el comienzo)
+    "This is all useless! There has to be some sort of identification here."
+    # sfx de policias acercandose
 
     return

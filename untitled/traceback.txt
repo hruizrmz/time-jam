@@ -3,28 +3,54 @@
 While running game code:
   File "game/scripts/sc_control.rpy", line 6, in script call
     call sc01_main
-  File "game/scripts/sc01.rpy", line 61, in script
-    menu:
-SyntaxError: invalid syntax (sc01.rpy, line 66)
+  File "game/scripts/sc01.rpy", line 70, in script
+    window show
+  File "renpy/common/000window.rpy", line 159, in execute_window_show
+    _window_show(trans)
+  File "renpy/common/000window.rpy", line 69, in _window_show
+    renpy.with_statement(trans)
+IOError: Couldn't find file 'audio/bgm/nost.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/scripts/sc_control.rpy", line 6, in script call
     call sc01_main
-  File "game/scripts/sc01.rpy", line 61, in script
-    menu:
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 1682, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/exports.py", line 1028, in menu
-    condition = renpy.python.py_eval(condition)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/python.py", line 2247, in py_eval
-    code = py_compile(code, 'eval')
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/python.py", line 835, in py_compile
-    raise e
-SyntaxError: invalid syntax (sc01.rpy, line 66)
+  File "game/scripts/sc01.rpy", line 70, in script
+    window show
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 2009, in execute
+    self.call("execute")
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 1997, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000window.rpy", line 159, in execute_window_show
+    _window_show(trans)
+  File "renpy/common/000window.rpy", line 69, in _window_show
+    renpy.with_statement(trans)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/exports.py", line 1682, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/display/core.py", line 2718, in do_with
+    clear=clear)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/display/core.py", line 3276, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/display/core.py", line 3978, in interact_core
+    renpy.audio.audio.periodic()
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/audio/audio.py", line 1126, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/audio/audio.py", line 1104, in periodic_thread_main
+    periodic_pass()
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/audio/audio.py", line 1046, in periodic_pass
+    c.periodic()
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/audio/audio.py", line 505, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/audio/audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/loader.py", line 798, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'audio/bgm/nost.mp3'.
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.4.6.1693
 untitled 1.0
-Fri Jul  2 18:48:15 2021
+Fri Jul  9 02:47:51 2021

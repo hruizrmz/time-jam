@@ -4,7 +4,12 @@ image bg room = "bgs/bg room.png"
 
 ## Characters ##############################################################
 #define mc = Character("MC", image = "mc/default.png")
-define mc = Character("MC")
+define n = Character(None, kind=nvl)
+
+define a = Character("Arthur", who_color="#ff3333")
+define b = Character("Benjamin", who_color="#0080ff")
+
+define bm = Character("Barman")
 #####################################################################
 
 ## Character Sprites #######################################################
@@ -17,6 +22,13 @@ image mc scared = "charas/komaeda/scared.png"
 
 ## BGM #####################################################################
 define audio.test = "<from 5 loop 0>audio/bgm/test.mp3"
+
+define audio.calm = "<loop 0>audio/bgm/calm.wav"
+define audio.inv = "<loop 0>audio/bgm/inv.wav"
+define audio.pan = "<loop 0>audio/bgm/pan.wav"
+define audio.ten = "<loop 0>audio/bgm/ten.wav"
+define audio.nost = "<loop 0>audio/bgm/nost.wav"
+define audio.som = "<loop 0>audio/bgm/som.mp3"
 #####################################################################
 
 ## SFX #####################################################################

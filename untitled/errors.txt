@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/definitions.rpy", line 29: u'xpos20' is not a keyword argument or valid child for the frame statement.
-    xpos20
-          ^
+File "game/scripts/sc01.rpy", line 16: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a ' at the end of the first line.)
+        This is the first line of dialogue. It's longer than the other two
 
 Ren'Py Version: Ren'Py 7.4.6.1693
-Wed Jul  7 21:12:08 2021
+Fri Jul  9 00:30:34 2021
