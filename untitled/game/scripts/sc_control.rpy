@@ -8,7 +8,7 @@ label start:
 
     $ config.rollback_enabled = False
 
-    call sc01_main
+    #call sc01_main
 
     call sc02_main
 

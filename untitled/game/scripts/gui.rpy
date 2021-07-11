@@ -64,19 +64,19 @@ define gui.name_text_font = "fonts/ATypewriterForMe.ttf"
 define gui.interface_text_font = "fonts/Roboto-Regular.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 28
+define gui.text_size = 32
 
 ## The size of character names.
-define gui.name_text_size = 30
+define gui.name_text_size = 32
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 24
+define gui.interface_text_size = 30
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 24
+define gui.label_text_size = 28
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 16
+define gui.notify_text_size = 24
 
 ## The size of the game's title.
 define gui.title_text_size = 50
@@ -129,11 +129,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 250
+define gui.dialogue_xpos = 225
 define gui.dialogue_ypos = 62
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 780
+define gui.dialogue_width = 795
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
