@@ -243,7 +243,7 @@ style choice_button_text is default:
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
-    zorder 100
+    zorder 300
 
     if quick_menu:
 

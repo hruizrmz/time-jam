@@ -1,57 +1,58 @@
-## Backgrounds #############################################################
-image bg room = "bgs/bg room.png"
-############################################################################
-
 ## Characters ##############################################################
 #define mc = Character("MC", image = "mc/default.png")
 define n = Character(None, kind=nvl)
+define narrator = Character(None, what_italic=True, who_color="DFDFDF")
 
-define a = Character("Arthur", who_color="#ff3333")
-define b = Character("Benjamin", who_color="#0080ff")
+define a = Character("Arthur", who_color="#ff3333", image="arthur")
+define b = Character("Benjamin", who_color="#004C99", image ="ben")
+define c = Character("Catherine", who_color="#CCFFFF", image="cat")
 
 define bm = Character("Barman")
+define dm = Character("Drunkard")
+define dj = Character("John McKellen", who_color="#009900")
+define la = Character("Landlady")
 #####################################################################
 
 ## Character Sprites #######################################################
-image sprite = "charas/sprite happy.png"
+#image sprite = "charas/sprite.png"
 
-image mc happy = "charas/komaeda/happy.png"
-image mc sad = "charas/komaeda/sad.png"
-image mc scared = "charas/komaeda/scared.png"
+image arthur = "charas/arthur/a1.png"
+image arthur happy = "charas/arthur/a2.png"
+image arthur angry = "charas/arthur/a3.png"
+image arthur sad = "charas/arthur/a4.png"
+image arthur conf = "charas/arthur/a5.png"
+
+image ben = "charas/ben/b1.png"
+image ben happy = "charas/ben/b2.png"
+image ben angry = "charas/ben/b3.png"
+image ben sad = "charas/ben/b4.png"
+image ben conf = "charas/ben/b5.png"
+
+image cat = "charas/cat/c1.png"
+image cat happy = "charas/cat/c2.png"
+image cat angry = "charas/cat/c3.png"
+image cat sad = "charas/cat/c4.png"
+image cat conf = "charas/cat/c5.png"
 #####################################################################
 
 ## BGM #####################################################################
-define audio.test = "<from 5 loop 0>audio/bgm/test.mp3"
-
 define audio.calm = "<loop 0>audio/bgm/calm.wav"
 define audio.inv = "<loop 0>audio/bgm/inv.wav"
-define audio.pan = "<loop 0>audio/bgm/pan.wav"
+define audio.pan = "<loop 2 to 79>audio/bgm/pan.wav"
 define audio.ten = "<loop 0>audio/bgm/ten.wav"
 define audio.nost = "<loop 0>audio/bgm/nost.wav"
-define audio.som = "<loop 0>audio/bgm/som.mp3"
+define audio.som = "<from 2 loop 0>audio/bgm/som.mp3"
 #####################################################################
 
 ## SFX #####################################################################
-
-#####################################################################
-
-## Screens #################################################################
-screen omg:
-    frame:
-        xpos 20
-        ypos 20
-        text "omg is that a sprite":
-            size 40
-
-screen sprite:
-    imagebutton:
-        xpos 150
-        ypos 150
-        idle "charas/sprite.png"
-        at custom_zoom
-        # hover "a different picture"
-        action [ Hide("omg"), Jump("sc02_sprite") ]
-
+define audio.s01 = "audio/sfx/01.mp3"
+define audio.s02 = "audio/sfx/02.mp3"
+define audio.s03 = "audio/sfx/03.mp3"
+define audio.s04 = "audio/sfx/04.mp3"
+define audio.s05 = "<from 0 to 2>audio/sfx/05.mp3"
+define audio.s06 = "<from 0 to 2>audio/sfx/06.mp3"
+define audio.s07 = "audio/sfx/07.mp3"
+define audio.s08 = "<from 0 to 5>audio/sfx/08.mp3"
 #####################################################################
 
 ## Transforms #############################################################
@@ -62,7 +63,8 @@ transform halfright:
     xalign 0.75 yalign 0.25
 
 transform ctr:
-    xalign 0.5 yalign 0.25
+    zoom 0.6
+    xalign 0.5 yalign 0.1
 
 transform custom_zoom:
     zoom 0.3

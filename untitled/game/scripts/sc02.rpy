@@ -1,16 +1,13 @@
-# Testing point & click
+## MEETING BEN
 label sc02_main:
-    scene black
-    show mc sad at ctr, close_up
-    mc "Man, I sure am thirsty!"
-    show screen omg
-    call screen sprite
+    scene sc_apt_day
+    with flash
+    play music calm fadein 1.5
+    $ quick_menu = True
 
-label sc02_sprite:
-    show mc
-    mc "Ayo, what's a Sprite doing here?"
-    show mc happy at close_up
-    mc "Today must be my lucky day!"
+    a "..."
+    show arthur conf at ctr
+    a "Did I make it..?"
 
-    "END OF TEST"
+
     return
