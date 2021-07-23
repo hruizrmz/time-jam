@@ -1,11 +1,13 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scripts/sc_control.rpy", line 5, in script
-    image white = "#fffff"
-  File "game/scripts/sc_control.rpy", line 5, in script
-    image white = "#fffff"
-Exception: Color string u'fffff' must be 3, 4, 6, or 8 hex digits long.
+  File "game/scripts/gui.rpy", line 88, in script
+    define gui.main_menu_background = white
+  File "game/scripts/gui.rpy", line 88, in script
+    define gui.main_menu_background = white
+  File "game/scripts/gui.rpy", line 88, in <module>
+    define gui.main_menu_background = white
+NameError: name 'white' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -14,23 +16,21 @@ Full traceback:
     renpy.main.main()
   File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/main.py", line 515, in main
     renpy.game.context().run(node)
-  File "game/scripts/sc_control.rpy", line 5, in script
-    image white = "#fffff"
-  File "game/scripts/sc_control.rpy", line 5, in script
-    image white = "#fffff"
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 1025, in execute
-    renpy.exports.image(self.imgname, img)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/exports.py", line 386, in image
-    d = renpy.easy.displayable(d)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/easy.py", line 120, in displayable
-    return renpy.store.Solid(d)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/display/imagelike.py", line 49, in __init__
-    self.color = renpy.easy.color(color)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/color.py", line 165, in __new__
-    raise Exception("Color string {!r} must be 3, 4, 6, or 8 hex digits long.".format(c))
-Exception: Color string u'fffff' must be 3, 4, 6, or 8 hex digits long.
+  File "game/scripts/gui.rpy", line 88, in script
+    define gui.main_menu_background = white
+  File "game/scripts/gui.rpy", line 88, in script
+    define gui.main_menu_background = white
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 2207, in execute
+    self.set()
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 2218, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/scripts/gui.rpy", line 88, in <module>
+    define gui.main_menu_background = white
+NameError: name 'white' is not defined
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.4.6.1693
-untitled 1.0
-Sun Jul 11 04:02:53 2021
+Murdrum 1.0
+Sun Jul 11 10:45:44 2021

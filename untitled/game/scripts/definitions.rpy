@@ -55,16 +55,16 @@ define audio.s08 = "<from 0 to 5>audio/sfx/08.mp3"
 
 ## Transforms #############################################################
 transform halfleft:
-    zoom 0.6
-    xalign -0.5 yalign 0.1
+    zoom 0.3
+    xalign 0 yalign 0
 
 transform halfright:
-    zoom 0.6
-    xalign 1.5 yalign 0.1
+    zoom 0.3
+    xalign 1.1 yalign 0
 
 transform ctr:
-    zoom 0.6
-    xalign 0.5 yalign 0.1
+    zoom 0.4
+    xalign 0.5 yalign 0
 
 transform custom_zoom:
     zoom 0.3
