@@ -303,6 +303,7 @@ screen navigation():
         if main_menu:
 
             textbutton _("Start") action Start()
+            #imagebutton auto "gui/menu/start_%s.png" xpos 150 ypos 150 focus_mask True action Start()
 
         else:
 
@@ -322,7 +323,7 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        #textbutton _("About") action ShowMenu("about")
 
         #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 

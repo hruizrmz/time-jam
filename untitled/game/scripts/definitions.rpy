@@ -3,8 +3,8 @@
 define n = Character(None, kind=nvl)
 define narrator = Character(None, what_italic=True, who_color="DFDFDF")
 
-define a = Character("Arthur", who_color="#ff3333", image="arthur")
-define b = Character("Benjamin", who_color="#004C99", image ="ben")
+define a = Character("Arthur", who_color="#FF0000", image="arthur")
+define b = Character("Benjamin", who_color="#0080FF", image ="ben")
 define c = Character("Catherine", who_color="#CCFFFF", image="cat")
 
 define bm = Character("Barman")
@@ -14,8 +14,6 @@ define la = Character("Landlady")
 #####################################################################
 
 ## Character Sprites #######################################################
-#image sprite = "charas/sprite.png"
-
 image arthur = "charas/arthur/a1.png"
 image arthur happy = "charas/arthur/a2.png"
 image arthur angry = "charas/arthur/a3.png"
@@ -57,14 +55,16 @@ define audio.s08 = "<from 0 to 5>audio/sfx/08.mp3"
 
 ## Transforms #############################################################
 transform halfleft:
-    xalign 0.25 yalign 0.25
+    zoom 0.3
+    xalign 0 yalign 0
 
 transform halfright:
-    xalign 0.75 yalign 0.25
+    zoom 0.3
+    xalign 1.1 yalign 0
 
 transform ctr:
-    zoom 0.6
-    xalign 0.5 yalign 0.1
+    zoom 0.4
+    xalign 0.5 yalign 0
 
 transform custom_zoom:
     zoom 0.3

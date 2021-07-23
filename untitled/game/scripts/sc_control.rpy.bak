@@ -8,9 +8,9 @@ label start:
 
     $ config.rollback_enabled = False
 
-    call sc01_main from _call_sc01_main
+    call sc01_main
 
-    call sc02_main from _call_sc02_main
+    call sc02_main
 
     # This ends the game.
     return
