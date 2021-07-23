@@ -1,36 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "game/scripts/gui.rpy", line 88, in <module>
-    define gui.main_menu_background = white
-NameError: name 'white' is not defined
+After initialization, but before game start.
+  File "renpy/common/00start.rpy", line 80, in _init_language
+    renpy.change_language(language)
+  File "game/scripts/screens.rpy", line 401, in <module>
+    background black
+NameError: name 'black' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/bootstrap.py", line 326, in bootstrap
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/bootstrap.py", line 326, in bootstrap
     renpy.main.main()
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/main.py", line 515, in main
-    renpy.game.context().run(node)
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 2207, in execute
-    self.set()
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 2218, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/python.py", line 2242, in py_eval_bytecode
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/main.py", line 617, in main
+    run(restart)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/main.py", line 78, in run
+    renpy.translation.init_translation()
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/translation/__init__.py", line 561, in init_translation
+    renpy.store._init_language() # @UndefinedVariable
+  File "renpy/common/00start.rpy", line 80, in _init_language
+    renpy.change_language(language)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/translation/__init__.py", line 645, in change_language
+    new_change_language(tl, language)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/translation/__init__.py", line 607, in new_change_language
+    i.apply()
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/ast.py", line 2669, in apply
+    value = renpy.python.py_eval(expr)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2242, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/scripts/gui.rpy", line 88, in <module>
-    define gui.main_menu_background = white
-NameError: name 'white' is not defined
+  File "game/scripts/screens.rpy", line 401, in <module>
+    background black
+NameError: name 'black' is not defined
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.4.6.1693
-Murdrum 1.0
-Sun Jul 11 10:45:44 2021
+Murdrum 1.1
+Fri Jul 23 18:07:09 2021

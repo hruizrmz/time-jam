@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/screens.rpy", line 306: u'with' is not a keyword argument or valid child for the imagebutton statement.
-    imagebutton auto "gui/menu/start_%s.png" xpos 150 ypos 150 with custom_zoom focus_mask True action Start()
-                                                                   ^
+File "game/scripts/screens.rpy", line 303: vbox expects a non-empty block.
+    if main_menu:
+                 ^
 
 Ren'Py Version: Ren'Py 7.4.6.1693
-Sun Jul 11 10:43:20 2021
+Fri Jul 23 17:57:51 2021

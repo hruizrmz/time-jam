@@ -300,16 +300,9 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Start") action Start()
-            #imagebutton auto "gui/menu/start_%s.png" xpos 150 ypos 150 focus_mask True action Start()
-
-        else:
-
-            textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Save") action ShowMenu("save")
+        textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 
@@ -329,12 +322,6 @@ screen navigation():
 
             ## Help isn't necessary or relevant to mobile devices.
             # textbutton _("Help") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -367,7 +354,22 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+
+    vbox:
+        style_prefix "navigation"
+
+        xpos gui.navigation_xpos
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
+        imagebutton auto "gui/menu/start_%s.png" xpos 125 ypos 60 focus_mask True action Start()
+
+        imagebutton auto "gui/menu/load_%s.png" xpos 125 ypos 70 focus_mask True action ShowMenu("load")
+
+        imagebutton auto "gui/menu/set_%s.png" xpos 125 ypos 80 focus_mask True action ShowMenu("preferences")
+
+        imagebutton auto "gui/menu/exit_%s.png" xpos 125 ypos 90 focus_mask True action Quit(confirm=not main_menu)
 
     if gui.show_name:
 
@@ -733,12 +735,12 @@ screen preferences():
                         textbutton _("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
-                vbox:
-                    style_prefix "radio"
-                    label _("Rollback Side")
-                    textbutton _("Disable") action Preference("rollback side", "disable")
-                    textbutton _("Left") action Preference("rollback side", "left")
-                    textbutton _("Right") action Preference("rollback side", "right")
+                #vbox:
+                #    style_prefix "radio"
+                #    label _("Rollback Side")
+                #    textbutton _("Disable") action Preference("rollback side", "disable")
+                #    textbutton _("Left") action Preference("rollback side", "left")
+                #    textbutton _("Right") action Preference("rollback side", "right")
 
                 vbox:
                     style_prefix "check"
