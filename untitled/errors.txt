@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/screens.rpy", line 303: vbox expects a non-empty block.
-    if main_menu:
-                 ^
+File "game/scripts/sc03a.rpy", line 7: end of line expected.
+    n "A couple hours went by as he searched 5 different toystores. No one seemed to have heard of the brand 'Doorbell Toys'. It was as if it didn't even exist."""
+                                                                                                                                                                 ^
 
 Ren'Py Version: Ren'Py 7.4.6.1693
-Fri Jul 23 17:57:51 2021
+Sat Jul 24 18:58:42 2021

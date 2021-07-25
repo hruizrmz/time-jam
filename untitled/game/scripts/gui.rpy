@@ -48,7 +48,7 @@ define gui.muted_color = u'#510000'
 define gui.hover_muted_color = u'#7a0000'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = u'#ffffff'
+define gui.text_color = u'#FFFFFF'
 define gui.interface_text_color = u'#ffffff'
 
 
@@ -64,7 +64,7 @@ define gui.name_text_font = "fonts/ATypewriterForMe.ttf"
 define gui.interface_text_font = "fonts/Roboto-Regular.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 32
+define gui.text_size = 30
 
 ## The size of character names.
 define gui.name_text_size = 32

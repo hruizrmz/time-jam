@@ -41,19 +41,17 @@ label sc02_main:
     $ renpy.pause (0.5, hard=False)
     show arthur at halfleft
     a "... Hello?"
-    show ben at halfright
     $ renpy.pause (0.5, hard=False)
+    show ben at halfright
     b "Hello, how may I help you?"
     a sad "It's me, Ben."
     b angry "Arthur? I've told you not to call me! Especially on a day like this."
     $ quick_menu = False
     window show
     n """
-    Arthur had a younger brother, Benjamin.
+    Arthur had a younger brother, Benjamin. He has leg paralysis from an accident during his childhood.
 
-    Benjamin was the younger of the two, and had leg paralysis from an accident during his childhood.
-
-    These reasons made it impossible for him to go to the war, so he ended up spending a lo of time at home.
+    These reasons made it impossible for him to go to the war, so he ended up spending a lot of time at home.
 
     He spent his long days studying law and making a name of himself as a lawyer around town.
     """
@@ -124,30 +122,8 @@ label sc02_main:
     hide ben
     $ quick_menu = False
     stop music fadeout 1.0
-    scene white
+    scene black
     with fade
-    $ renpy.pause (2, hard=True)
-    window show
-    n """
-
-    Hello, thank you so much for playing our prologue!
-
-    This is what we could finish on time for the jam, but we will release the full story soon.
-
-    We already have the entire plot, art, and music... now we just need to script it all together.
-
-    """
-    nvl clear
-    n """
-
-    So, make sure to keep an eye out for updates on the chapters.
-
-    Until next time! :)
-
-    """
-    window hide
-    nvl clear
-    with fade
-    $ renpy.pause (2, hard=True)
+    $ renpy.pause (5, hard=True)
 
     return

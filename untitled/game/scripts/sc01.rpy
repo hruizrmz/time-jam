@@ -39,7 +39,7 @@ label sc01_main:
     a happy "I insist."
     bm "Well, thank you very much! Should I walk you to the exit?"
     a -happy "That won't be necessary. I can manage on my own."
-    "I say that and yet I almost fell on my ass as I stood up..."
+    "{i}I say that and yet I almost fell on my ass as I stood up...{/i}"
     hide arthur
 
     scene sc_alley
@@ -93,8 +93,8 @@ label sc01_main:
     $ renpy.pause (0.5, hard=False)
     $ quick_menu = True
     a "God..."
-    "I can hardly breathe. This is just insane."
-    "... Get it together. I need to take a closer look and figure this out."
+    "{i}I can hardly breathe. This is just insane.{/i}"
+    "{i}... Get it together. I need to take a closer look and figure this out.{/i}"
     $ quick_menu = False
     call screen bag_01
 
@@ -111,16 +111,15 @@ label sc01_toy:
     la "What do you think you're doing!? You're going to wake up the whole damn building..!"
     la "Don't even get me started on the ti-- Oh, Christ!"
     show arthur sad at ctr
-    "Shit, she noticed the body... I probably shouldn't be holding this bloody purse either."
+    "{i}Shit, she noticed the body... I probably shouldn't be holding this bloody purse either.{/i}"
     show arthur conf
-    "What's she running to the window for..?"
+    "{i}What's she running to the window for..?{/i}"
     la "Help! Police! There's been a murder!"
     play sound s04 volume 0.5
     "Policeman" "Quick, go call for some backup!"
-    a sad "Ah..!"
-    "I can't really blame her. I'm scared to death myself."
-    show arthur angry
-    "Quick, get a grip! Are there any other clues?"
+    a angry "Ah..!"
+    "{i}I can't really blame her. I'm scared to death myself.{/i}"
+    "{i}Quick, get a grip! Are there any other clues?{/i}"
     hide arthur
     $ quick_menu = False
     scene sc_body
@@ -145,15 +144,15 @@ label sc01_ticket:
     play music ten volume 0.7
     $ quick_menu = True
     show arthur angry at ctr
-    "I just need to keep looking! There has to be an ID somewhere."
+    "{i}I just need to keep looking! There has to be an ID somewhere.{/i}"
     play sound s05 volume 0.8
     "Policeman" "Get ready to arrest the suspect! Beware of any weapons!"
     la "Quick, he's in here!"
     $ quick_menu = False
-    "I can't stay here, my life will be over."
+    "{i}I can't stay here, my life will be over.{/i}"
     show arthur
-    "... I can only think of one thing."
-    "I swore to never do this again, but I have no choice here."
+    "{i}... I can only think of one thing.{/i}"
+    "{i}I swore to never do this again, but I have no choice here.{/i}"
     a angry "Come on, focus.... it's now or never!"
     stop music
     play sound s07

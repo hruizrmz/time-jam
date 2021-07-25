@@ -41,3 +41,12 @@ screen ticket:
         xpos 140
         ypos 85
         add "items/03.png"
+
+screen mem_01:
+    imagebutton:
+        xalign 0.5
+        ypos 0
+        idle "charas/cat/c6.png"
+        hover "charas/cat/c6_hover.png"
+        at custom_zoom
+        action [Hide("mem_01"), Jump("sc03a_mem")]
