@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/scripts/sc03a.rpy", line 7: end of line expected.
-    n "A couple hours went by as he searched 5 different toystores. No one seemed to have heard of the brand 'Doorbell Toys'. It was as if it didn't even exist."""
-                                                                                                                                                                 ^
+File "game/scripts/definitions.rpy", line 33: invalid syntax
+                "_last_say_who == 'a'", "charas/arthur/a5.png" at focus,\
+                                                                 ^
+    
 
 Ren'Py Version: Ren'Py 7.4.6.1693
-Sat Jul 24 18:58:42 2021
+Wed Jul 28 14:33:06 2021

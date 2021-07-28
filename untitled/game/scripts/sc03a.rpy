@@ -1,10 +1,10 @@
 ##INVESTIGATION 1 - ARTHUR
 label sc03a_main:
     play music inve fadein 1.5 volume 0.8
-    scene sc_toys # later to be street scene
+    scene sc_alley # later to be street scene
     with Dissolve(2)
     n "After hanging up the phone, Arthur headed downtown, where one could find all kinds of shops."
-    n "A couple hours went by as he searched 5 different toystores. No one seemed to have heard of the brand 'Doorbell Toys'. It was as if it didn't even exist."
+    n "A couple hours went by as he searched five different toystores. No one seemed to have heard of the brand 'Doorbell Toys'. It was as if it didn't even exist."
     n "\nAs he went into yet another store, someone approached him from the back."
     window hide
     nvl clear
@@ -30,16 +30,10 @@ label sc03a_main:
     scene black
     with Dissolve(1)
     $ renpy.pause (0.5, hard=True)
-    window show
-    n """
-    Both of them walked into an alley, where a green wooden door with a crystal window awaited them.
-
-    There was a sign that read 'We Are Open!'. So, they went in as a small bell announced their entrance.
-
-    The entire place was decked with toys from tin cars and soldiers, to puppets hanging from the ceiling.
-
-    Near the entrance, there was a long glass case filled with toys that looked even more antique.
-    """
+    n "Both of them walked into an alley, where a green wooden door with a crystal window awaited them."
+    n "There was a sign that read 'We Are Open!'. So, they went in as a small bell announced their entrance."
+    n "The entire place was decked with toys from tin cars and soldiers, to puppets hanging from the ceiling."
+    n "Near the entrance, there was a long glass case filled with toys that looked even more antique."
     window hide
     nvl clear
     play sound s06 volume 0.6
@@ -62,13 +56,14 @@ label sc03a_main:
     a happy "A fair, eh? It's been so long since I've been to one."
     a "Not since..."
     $ quick_menu = False
-    stop music fadeout 1.5
+    stop music fadeout 0.6
     hide arthur
     play sound s09 volume 0.8
     scene white
     with flash
     $ renpy.pause (2, hard=True)
     play music nostb fadein 1.5 volume 1.0
+
     "{i}...What is this feeling?{/i}"
     call screen mem_01 with Dissolve(1)
 
@@ -77,29 +72,24 @@ label sc03a_mem:
     with flash
     # play sound CAT LAUGHING volume 0.8
     $ renpy.pause (1.5, hard=True)
-    window show
-    n """
-    A flashing memory of a day at the fair with a girl came back to Arthur after the Toymaker's remark.
-
-    He recalled a promise involving a big teddy bear wearing a blue ribbon; but with whom?
-
-    The promise was never fulfilled, as Arthur recalls winning something else instead.
-    """
+    n "A flashing memory of a day at the fair with a girl came back to Arthur after the Toymaker's remark."
+    n "He recalled a promise involving a big teddy bear wearing a blue ribbon; but with whom?"
+    n "The promise was never fulfilled, as Arthur recalls winning something else instead."
     window hide
     nvl clear
     cn "Arthur! This little guy is adorable, hehe~"
     cn "Thank you, truly."
     cn ". . ."
-    cn "I... love you."
     stop music
+    cn "I... love you."
     scene sc_toys
     with flash
-    $ renpy.pause (1.5, hard=True)
+    $ renpy.pause (0.8, hard=True)
 
     show arthur conf at ctr
     $ quick_menu = True
     "{i}The fair...{/i}"
-    play music inve fadein 1.5 volume 0.8
+    play music som fadein 1.5 volume 0.8
     a happy "That's it!"
     a -happy "I'd like to stay and chat but I have to go, immediately."
     "Charles" "Must you leave so soon?"
@@ -109,7 +99,7 @@ label sc03a_mem:
     $ quick_menu = False
     hide arthur
     scene black
-    with fade
+    with Dissolve(2)
     $ renpy.pause (4, hard=True)
 
     return

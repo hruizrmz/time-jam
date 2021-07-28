@@ -1,22 +1,21 @@
-## INTRO SCENE
+with Dissolve(2)## INTRO SCENE
 label sc01_main:
     $ quick_menu = False
     scene black
-    with fade
+    with Dissolve(2)
     $ renpy.pause (1, hard=True)
 
     play music som fadein 1.0
     scene sc_bar
     with Dissolve(2)
-    window show
     n """
-    The Golden Hat Bar is a nice small place, adorned by a yellow light
+    The Golden Hat Bar is a nice small place, adorned by a yellow light.
 
-    The shelf on the back displays bottles of all kinds
+    The shelf on the back displays bottles of all kinds.
 
     And there's a noticeable lack of cleaning...
 
-    But the cozy and calm ambience make up for it
+    But the cozy and calm ambience make up for it.
     """
     window hide
     nvl clear
@@ -45,14 +44,9 @@ label sc01_main:
     scene sc_alley
     with Dissolve(2)
     play sound s06 volume 0.6
-    window show
-    n """
-    Arthur lit up a cigar and observed the dark sky for a moment
-
-    The night was illuminated by stars and flickering street lamps
-
-    Perfect for walking a couple blocks and showing the way back home
-    """
+    n "Arthur lit up a cigar and observed the dark sky for a moment."
+    n "The night was illuminated by stars and flickering street lamps."
+    n "Perfect for walking a couple blocks and showing the way back home."
     a "Ah... I guess it's time to go back."
     window hide
     nvl clear
@@ -60,7 +54,7 @@ label sc01_main:
     $ renpy.pause (1, hard=False)
 
     scene black
-    with fade
+    with Dissolve(2)
     show arthur at ctr
     a "Damn it... I hate being on the third floor."
     a angry "The rent is not worth tripping on all these stairs"
@@ -69,24 +63,19 @@ label sc01_main:
     queue sound s02
     $ renpy.pause (2, hard=True)
     scene sc_apt_night
-    with fade
+    with Dissolve(2)
     show arthur at ctr
     a conf "Huh, it's quiet in here... What happened to that annoying leak?"
     a "The chairs are out of place too. Was I already drunk before getting to the bar?"
     hide arthur
     scene sc_body
-    with fade
+    with Dissolve(2)
     play sound s03
     a ". . ."
     $ quick_menu = False
-    window show
-    n """
-    As Arthur fell to the ground, he lost his composure
-
-    A scream that carried both fright and pain rang through the hallway
-
-    This was reality; he had found a woman's corpse inside his apartment
-    """
+    n "As Arthur fell to the ground, he lost his composure."
+    n "A scream that carried both fright and pain rang through the hallway."
+    n "This was reality; he had found a woman's corpse inside his apartment."
     play music pan volume 0.6
     window hide
     nvl clear
@@ -153,8 +142,8 @@ label sc01_ticket:
     show arthur
     "{i}... I can only think of one thing.{/i}"
     "{i}I swore to never do this again, but I have no choice here.{/i}"
+    stop music fadeout 0.3
     a angry "Come on, focus.... it's now or never!"
-    stop music
     play sound s07
     hide arthur
     scene white

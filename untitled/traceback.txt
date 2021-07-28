@@ -1,40 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 80, in _init_language
-    renpy.change_language(language)
-  File "game/scripts/screens.rpy", line 401, in <module>
-    background black
-NameError: name 'black' is not defined
+While running game code:
+  File "renpy/common/00keymap.rpy", line 463, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 463, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 482, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/bootstrap.py", line 326, in bootstrap
-    renpy.main.main()
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/main.py", line 617, in main
-    run(restart)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/main.py", line 78, in run
-    renpy.translation.init_translation()
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/translation/__init__.py", line 561, in init_translation
-    renpy.store._init_language() # @UndefinedVariable
-  File "renpy/common/00start.rpy", line 80, in _init_language
-    renpy.change_language(language)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/translation/__init__.py", line 645, in change_language
-    new_change_language(tl, language)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/translation/__init__.py", line 607, in new_change_language
-    i.apply()
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/ast.py", line 2669, in apply
-    value = renpy.python.py_eval(expr)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2249, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2242, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/scripts/screens.rpy", line 401, in <module>
-    background black
-NameError: name 'black' is not defined
+  File "renpy/common/00keymap.rpy", line 463, in script
+    python hide:
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/ast.py", line 922, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2218, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 463, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 482, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/loadsave.py", line 394, in save
+    roots = renpy.game.log.freeze(None)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2115, in freeze
+    self.complete(False)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 1721, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.4.6.1693
 Murdrum 1.1
-Fri Jul 23 18:07:09 2021
+Wed Jul 28 15:00:45 2021
