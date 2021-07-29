@@ -12,6 +12,7 @@ label sc03a_main:
     $ quick_menu = True
     "???" "Excuse me, are you the one that's been going around asking about a lion plush?"
     show arthur at ctr
+    with Dissolve(0.1)
     a "That's correct. Would you happen to know anything about 'Doorbell Toys'?"
     "???" "Of course I do, sonny! It was quite a popular brand before the war."
     "???" "Unfortunately, that moment of fame was brief. People had to prioritize survival over toys."
@@ -25,7 +26,7 @@ label sc03a_main:
     $ quick_menu = False
     $ renpy.pause (0.5, hard=True)
 
-    # play sound PPL WALKING volume 0.7
+    play sound s10 volume 0.6
     hide arthur
     scene black
     with Dissolve(1)
@@ -45,6 +46,7 @@ label sc03a_main:
     tm "It's a bit slow, Charles... Just about the usual."
     "Charles" "Well, this will surely brighten up your day. This kid is interested in your relics! He is, um..."
     show arthur at ctr
+    with Dissolve(0.1)
     a "Arthur... Arthur Walker, sir."
     tm "Very well, Mr. Walker. How may I help you today?"
     a "I'm looking for a lion plush from the brand 'Doorbell Toys'. I was hoping you could show me one."
@@ -54,23 +56,22 @@ label sc03a_main:
     tm "I must apologize, Mr. Walker. I recently sold the last model to a pretty lady; three hours ago as a matter of fact."
     tm "She seemed quite keen on it too. She shared that she would repay a friend for gifting it to her at a fair once."
     a happy "A fair, eh? It's been so long since I've been to one."
+    stop music fadeout 0.6
     a "Not since..."
     $ quick_menu = False
-    stop music fadeout 0.6
-    hide arthur
     play sound s09 volume 0.8
+    hide arthur
     scene white
     with flash
     $ renpy.pause (2, hard=True)
     play music nostb fadein 1.5 volume 1.0
-
     "{i}...What is this feeling?{/i}"
     call screen mem_01 with Dissolve(1)
 
 label sc03a_mem:
+    play sound s12 volume 0.6
     show cat mem at ctr
     with flash
-    # play sound CAT LAUGHING volume 0.8
     $ renpy.pause (1.5, hard=True)
     n "A flashing memory of a day at the fair with a girl came back to Arthur after the Toymaker's remark."
     n "He recalled a promise involving a big teddy bear wearing a blue ribbon; but with whom?"
@@ -87,6 +88,7 @@ label sc03a_mem:
     $ renpy.pause (0.8, hard=True)
 
     show arthur conf at ctr
+    with Dissolve(0.1)
     $ quick_menu = True
     "{i}The fair...{/i}"
     play music som fadein 1.5 volume 0.8

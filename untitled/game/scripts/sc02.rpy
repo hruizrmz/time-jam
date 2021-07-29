@@ -13,6 +13,7 @@ label sc02_main:
     $ quick_menu = True
     a "..."
     show arthur conf at ctr
+    with Dissolve(0.2)
     a "Did I make it?"
     a sad "I feel exhausted..."
     a "Jumping takes a lot of energy, not to mention I can only go back 24 hours at a time."
@@ -34,6 +35,7 @@ label sc02_main:
     with Dissolve(2)
     $ renpy.pause (0.5, hard=False)
     show arthur at halfleft
+    with Dissolve(0.1)
     a "... Hello?"
     $ renpy.pause (0.5, hard=False)
     show ben at halfright
@@ -109,10 +111,10 @@ label sc02_main:
     b happy "..."
     b -happy "Go on. I'll meet you later."
     b angry "Do NOT be late."
+    stop music fadeout 1.0
+    $ quick_menu = False
     hide arthur
     hide ben
-    $ quick_menu = False
-    stop music fadeout 1.0
     scene black
     with Dissolve(2)
     $ renpy.pause (5, hard=True)

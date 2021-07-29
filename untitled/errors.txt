@@ -8,4 +8,4 @@ File "game/scripts/definitions.rpy", line 33: invalid syntax
     
 
 Ren'Py Version: Ren'Py 7.4.6.1693
-Wed Jul 28 14:33:06 2021
+Wed Jul 28 22:17:13 2021

@@ -1,36 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00keymap.rpy", line 463, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 463, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 482, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "game/scripts/sc_control.rpy", line 23, in script
+    menu:
+  File "game/scripts/sc_control.rpy", line 24, in <module>
+    set menuset
+NameError: name 'menuset' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 463, in script
-    python hide:
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/ast.py", line 922, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 463, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 482, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/loadsave.py", line 394, in save
-    roots = renpy.game.log.freeze(None)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2115, in freeze
-    self.complete(False)
-  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 1721, in complete
-    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "game/scripts/sc_control.rpy", line 23, in script
+    menu:
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/ast.py", line 1682, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/exports.py", line 1002, in menu
+    set = renpy.python.py_eval(set_expr) # @ReservedAssignment
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/scripts/sc_control.rpy", line 24, in <module>
+    set menuset
+NameError: name 'menuset' is not defined
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.4.6.1693
 Murdrum 1.1
-Wed Jul 28 15:00:45 2021
+Wed Jul 28 22:45:08 2021

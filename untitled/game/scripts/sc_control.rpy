@@ -17,21 +17,31 @@ init -2:
 
     image white = "#fff"
 
-    # $ config.rollback_enabled = False
-
+    $ config.rollback_enabled = False
 
 label start:
-    # add a choice to skip the prologue aka sc01 + sc02
+    menu:
+        "Would you like to skip the prologue?"
 
-    #call sc01_main from _call_sc01_main
+        "Yes":
+            jump start_02
 
-    #call sc02_main from _call_sc02_main
+        "No":
+            jump start_01
 
-    #call sc03a_main from _call_sc03a_main
+label start_01:
+    call sc01_main from _call_sc01_main
+
+    call sc02_main from _call_sc02_main
+
+    jump start_02
+
+label start_02:
+    call sc03a_main from _call_sc03a_main
 
     call sc03b_main from _call_sc03b_main
 
-    #call sc04_main from _call_sc04_main
+    call sc04_main from _call_sc04_main
 
     # This ends the game.
     return

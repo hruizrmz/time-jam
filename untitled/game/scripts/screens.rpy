@@ -214,7 +214,7 @@ screen choice(items):
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
-define config.narrator_menu = True
+define config.narrator_menu = False
 
 
 style choice_vbox is vbox

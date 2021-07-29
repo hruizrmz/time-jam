@@ -4,16 +4,16 @@ define narrator = Character(None, what_italic=True, who_color="C0C0C0", ctc="ctc
 
 define a = Character("Arthur", who_color="#D82626", image="arthur", ctc="ctc_blink")
 define b = Character("Benjamin", who_color="#1375D7", image ="ben", ctc="ctc_blink")
-define c = Character("Catherine", who_color="#CCFFFF", image="cat", ctc="ctc_blink")
-define cn = Character("???", who_color="#CCFFFF", ctc="ctc_blink")
+define c = Character("Catherine", who_color="#16C3C3", image="cat", ctc="ctc_blink")
+define cn = Character("???", who_color="#16C3C3", ctc="ctc_blink")
 
 define bm = Character("Barman", who_color="#E1C615", ctc="ctc_blink") #choose a diff color
 define dm = Character("Drunkard", ctc="ctc_blink")
 define dj = Character("John McKellen", who_color="#109010", ctc="ctc_blink")
 define la = Character("Landlady", ctc="ctc_blink")
-define tmn = Character("???", who_color="#E1C615", ctc="ctc_blink")
-define tm = Character("John the Toymaker", who_color="#E1C615", ctc="ctc_blink")
-define cl = Character("Claire the Manager", who_color="#E1C615", ctc="ctc_blink") #pinkish color
+define tmn = Character("???", who_color="#78CD2F", ctc="ctc_blink")
+define tm = Character("John the Toymaker", who_color="#78CD2F", ctc="ctc_blink")
+define cl = Character("Claire the Manager", who_color="#800E47", ctc="ctc_blink")
 #####################################################################
 
 ## Character Sprites #######################################################
@@ -30,8 +30,8 @@ image arthur sad = ConditionSwitch(
             "_last_say_who == 'a'", "charas/arthur/a4.png",
             "not _last_say_who == 'a'", im.MatrixColor("charas/arthur/a4.png", im.matrix.brightness(-0.08)))
 image arthur conf = ConditionSwitch(
-            "_last_say_who == 'a'", "charas/arthur/a5.png" at focus,
-            "not _last_say_who == 'a'", im.MatrixColor("charas/arthur/a5.png", im.matrix.brightness(-0.08)) at unfocus)
+            "_last_say_who == 'a'", "charas/arthur/a5.png",
+            "not _last_say_who == 'a'", im.MatrixColor("charas/arthur/a5.png", im.matrix.brightness(-0.08)))
 image arthur mem = ConditionSwitch(
             "_last_say_who == 'a'", "charas/arthur/a6.png",
             "not _last_say_who == 'a'", im.MatrixColor("charas/arthur/a6.png", im.matrix.brightness(-0.08)))
@@ -83,18 +83,21 @@ define audio.s07 = "audio/sfx/07.mp3"
 define audio.s08 = "<from 0 to 3>audio/sfx/08.mp3"
 define audio.s09 = "audio/sfx/09.mp3"
 define audio.s10 = "<from 0 to 3>audio/sfx/10.mp3"
-## agregar caja y cat riendo
+## agregar caja
+define audio.s12 = "audio/sfx/12.mp3"
 define audio.s13 = "<from 2>audio/sfx/13.mp3"
+
+define audio.rest = "<loop 0>audio/sfx/rest.mp3"
 #####################################################################
 
 ## Transforms #############################################################
-transform focus:
-    yoffset 20
-    easein 0.20 zoom 1.050
+#transform focus:
+#    yoffset 20
+#    easein 0.20 zoom 1.050
 
-transform unfocus:
-    yoffset 20
-    easeout 0.20 zoom 1.0
+#transform unfocus:
+#    yoffset 20
+#    easeout 0.20 zoom 1.0
 
 transform halfleft:
     zoom 0.35

@@ -24,6 +24,7 @@ label sc01_main:
     $ quick_menu = True
     bm "Sir, please get up. Do you know what time it is?"
     show arthur at ctr
+    with Dissolve(0.4)
     a "I'm sorry, what did you say?"
     bm "The time, sir... It's past 2 a.m. You've been asleep for a while."
     bm "We are about to close for the evening so I humbly ask for you to leave."
@@ -56,20 +57,23 @@ label sc01_main:
     scene black
     with Dissolve(2)
     show arthur at ctr
+    with Dissolve(0.1)
     a "Damn it... I hate being on the third floor."
     a angry "The rent is not worth tripping on all these stairs"
     hide arthur
+    with Dissolve(0.1)
     play sound s01
     queue sound s02
     $ renpy.pause (2, hard=True)
     scene sc_apt_night
     with Dissolve(2)
     show arthur at ctr
+    with Dissolve(0.1)
     a conf "Huh, it's quiet in here... What happened to that annoying leak?"
     a "The chairs are out of place too. Was I already drunk before getting to the bar?"
     hide arthur
     scene sc_body
-    with Dissolve(2)
+    with Dissolve(0.2)
     play sound s03
     a ". . ."
     $ quick_menu = False
@@ -100,6 +104,7 @@ label sc01_toy:
     la "What do you think you're doing!? You're going to wake up the whole damn building..!"
     la "Don't even get me started on the ti-- Oh, Christ!"
     show arthur sad at ctr
+    with Dissolve(0.1)
     "{i}Shit, she noticed the body... I probably shouldn't be holding this bloody purse either.{/i}"
     show arthur conf
     "{i}What's she running to the window for..?{/i}"
@@ -112,7 +117,7 @@ label sc01_toy:
     hide arthur
     $ quick_menu = False
     scene sc_body
-    with Dissolve(0.5)
+    with Dissolve(0.2)
     call screen bag_02
 
 label sc01_perfume:
@@ -129,10 +134,11 @@ label sc01_ticket:
     "This is all useless! This can't be everything..."
     hide screen ticket
     scene sc_apt_night
-    with Dissolve(0.5)
+    with Dissolve(0.2)
     play music ten volume 0.7
     $ quick_menu = True
     show arthur angry at ctr
+    with Dissolve(0.1)
     "{i}I just need to keep looking! There has to be an ID somewhere.{/i}"
     play sound s05 volume 0.8
     "Policeman" "Get ready to arrest the suspect! Beware of any weapons!"
