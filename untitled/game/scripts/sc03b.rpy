@@ -34,8 +34,10 @@ label sc03b_main:
 
     show sc_perfume
     with fade
+    show claire at leftNPC
+    with Dissolve(0.4)
     cl "Good day, gentleman. Welcome to Venus, where we awaken your senses!"
-    show ben at ctr
+    show ben at halfright
     b angry "{i}Yes, I am aware of that already...{/i}"
     cl "Pardon?"
     b conf "Nothing! Just saying that my name is Benjamin Walker."
@@ -54,6 +56,7 @@ label sc03b_main:
     cl "And... here. This is the current date. As you can see, there are no recent 'Arbre Bleu' purchases."
     b -conf "Hmm, would you mind if I took a closer look to confirm this?"
     cl "By all means, it's all yours."
+    play sound s14 volume 0.5
     "{i}Alright, this week is definitely empty. Seems like the most recent sale was as far as four weeks ago.{/i}"
     "{i}... Interesting.{/i}"
     b "Excuse me, the name 'John McKellen' shows up a lot in here."
@@ -79,8 +82,9 @@ label sc03b_main:
     cl "Sir, are you leaving already? It would make me very happy if you were to visit 'Venus' again sometime."
     b "I'm afraid I can't promise that, ma'am."
     b happy "But worry not, that fish memory of yours will soon forget me. Enjoy the rest of your day!"
-    cl "Wha-! Hmph."
     hide arthur
+    cl "Wha-! Hmph."
+    hide claire
     $ quick_menu = False
 
     scene sc_alley # later to be street scene

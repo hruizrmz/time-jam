@@ -1,4 +1,4 @@
-with Dissolve(2)## INTRO SCENE
+## INTRO SCENE
 label sc01_main:
     $ quick_menu = False
     scene black
@@ -22,8 +22,10 @@ label sc01_main:
 
     # dialogue starts
     $ quick_menu = True
+    show barman at rightNPC
+    with Dissolve(0.4)
     bm "Sir, please get up. Do you know what time it is?"
-    show arthur at ctr
+    show arthur at halfleft
     with Dissolve(0.4)
     a "I'm sorry, what did you say?"
     bm "The time, sir... It's past 2 a.m. You've been asleep for a while."
@@ -41,6 +43,7 @@ label sc01_main:
     a -happy "That won't be necessary. I can manage on my own."
     "{i}I say that and yet I almost fell on my ass as I stood up...{/i}"
     hide arthur
+    hide barman
 
     scene sc_alley
     with Dissolve(2)

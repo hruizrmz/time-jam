@@ -60,6 +60,16 @@ image cat angry = "charas/cat/c3.png"
 image cat sad = "charas/cat/c4.png"
 image cat conf = "charas/cat/c5.png"
 image cat mem = "charas/cat/c6.png"
+
+image barman = ConditionSwitch(
+            "_last_say_who == 'bm'", "charas/bm.png",
+            "not _last_say_who == 'bm'", im.MatrixColor("charas/bm.png", im.matrix.brightness(-0.23)))
+image toymaker = ConditionSwitch(
+            "_last_say_who == 'tm'", "charas/tm.png",
+            "not _last_say_who == 'tm'", im.MatrixColor("charas/tm.png", im.matrix.brightness(-0.23)))
+image claire = ConditionSwitch(
+            "_last_say_who == 'cl'", "charas/cl.png",
+            "not _last_say_who == 'cl'", im.MatrixColor("charas/cl.png", im.matrix.brightness(-0.23)))
 #####################################################################
 
 ## BGM #####################################################################
@@ -86,6 +96,7 @@ define audio.s10 = "<from 0 to 3>audio/sfx/10.mp3"
 ## agregar caja
 define audio.s12 = "audio/sfx/12.mp3"
 define audio.s13 = "<from 2>audio/sfx/13.mp3"
+define audio.s14 = "audio/sfx/14.mp3"
 
 define audio.rest = "<loop 0>audio/sfx/rest.mp3"
 #####################################################################
@@ -106,6 +117,14 @@ transform halfleft:
 transform halfright:
     zoom 0.35
     xalign 1.2 yalign 0.1
+
+transform rightNPC:
+    zoom 0.35
+    xalign 0.95 yalign -0.08
+
+transform leftNPC:
+    zoom 0.35
+    xalign 0.15 yalign -0.08
 
 transform ctr:
     zoom 0.4

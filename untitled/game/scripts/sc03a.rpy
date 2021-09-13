@@ -43,9 +43,11 @@ label sc03a_main:
     $ quick_menu = True
     tmn "Good evening, gentlemen."
     "???" "How's it going, John?"
+    show toymaker at rightNPC
+    with Dissolve(0.4)
     tm "It's a bit slow, Charles... Just about the usual."
     "Charles" "Well, this will surely brighten up your day. This kid is interested in your relics! He is, um..."
-    show arthur at ctr
+    show arthur at halfleft
     with Dissolve(0.1)
     a "Arthur... Arthur Walker, sir."
     tm "Very well, Mr. Walker. How may I help you today?"
@@ -61,6 +63,7 @@ label sc03a_main:
     $ quick_menu = False
     play sound s09 volume 0.8
     hide arthur
+    hide toymaker
     scene white
     with flash
     $ renpy.pause (2, hard=True)
@@ -87,7 +90,8 @@ label sc03a_mem:
     with flash
     $ renpy.pause (0.8, hard=True)
 
-    show arthur conf at ctr
+    show arthur conf at halfleft
+    show toymaker at rightNPC
     with Dissolve(0.1)
     $ quick_menu = True
     "{i}The fair...{/i}"
