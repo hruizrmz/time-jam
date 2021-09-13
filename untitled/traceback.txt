@@ -1,36 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "game/scripts/gui.rpy", line 88, in <module>
-    define gui.main_menu_background = white
-NameError: name 'white' is not defined
+After initialization, but before game start.
+OSError: [Errno 2] No such file or directory
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/bootstrap.py", line 326, in bootstrap
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/bootstrap.py", line 326, in bootstrap
     renpy.main.main()
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/main.py", line 515, in main
-    renpy.game.context().run(node)
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "game/scripts/gui.rpy", line 88, in script
-    define gui.main_menu_background = white
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 2207, in execute
-    self.set()
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/ast.py", line 2218, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "/Users/helena/Desktop/renpy-7.4.6-sdk/renpy/python.py", line 2242, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/scripts/gui.rpy", line 88, in <module>
-    define gui.main_menu_background = white
-NameError: name 'white' is not defined
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/main.py", line 567, in main
+    renpy.dump.dump(False)
+  File "/Users/helena/Downloads/renpy-7.4.6-sdk/renpy/dump.py", line 260, in dump
+    os.rename(new, filename)
+OSError: [Errno 2] No such file or directory
 
 Darwin-17.7.0-x86_64-i386-64bit
 Ren'Py 7.4.6.1693
-Murdrum 1.0
-Sun Jul 11 10:45:44 2021
+Murdrum 1.1
+Sat Jul 31 14:25:20 2021

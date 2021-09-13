@@ -3,33 +3,28 @@ label sc02_main:
     scene sc_apt_day
     with flash
     play music calm fadein 1.5 volume 0.8
-    window show
-    n """
-    Time suddenly moved backwards as Arthur arrived at his apartment
-
-    Everything was silent, and a dim light shone through the curtains
-
-    He stared at the bloodless carpet as he laid in bed
-
-    While his head was spinning, the clues he found remained present
-    """
+    n "Time suddenly moved backwards as Arthur arrived at his apartment."
+    n "Everything was silent, and a dim light shone through the curtains."
+    n "He stared at the bloodless carpet as he laid in bed."
+    n "While his head was spinning, the clues he found remained present."
     window hide
     nvl clear
     $ renpy.pause (0.5, hard=False)
     $ quick_menu = True
     a "..."
     show arthur conf at ctr
+    with Dissolve(0.2)
     a "Did I make it?"
     a sad "I feel exhausted..."
     a "Jumping takes a lot of energy, not to mention I can only go back 24 hours at a time."
     a angry "Ah, shit! I can't believe I fell asleep!"
-    a "It's already 7am. I need to find the culprit before the murder happens again."
+    a "It's already 7 a.m. I need to find the culprit before the murder happens again."
     a -angry "... The only person who can help me in a situation like this is my brother. I have to call him."
     $ quick_menu = False
     hide arthur
 
     scene black
-    with fade
+    with Dissolve(2)
     $ renpy.pause (1, hard=True)
     $ quick_menu = True
     "Operator" "Good day, who shall I connect you to?"
@@ -37,26 +32,21 @@ label sc02_main:
     "Operator" "Sure thing, please hold."
     play sound s08 volume 0.7
     scene sc_phone
-    with fade
+    with Dissolve(2)
     $ renpy.pause (0.5, hard=False)
     show arthur at halfleft
+    with Dissolve(0.1)
     a "... Hello?"
-    show ben at halfright
     $ renpy.pause (0.5, hard=False)
-    b "Hello, how may I help you?"
+    show ben at halfright
+    with Dissolve(0.8)
+    b "Hello, this is Walker. How may I help you?"
     a sad "It's me, Ben."
     b angry "Arthur? I've told you not to call me! Especially on a day like this."
     $ quick_menu = False
-    window show
-    n """
-    Arthur had a younger brother, Benjamin.
-
-    Benjamin was the younger of the two, and had leg paralysis from an accident during his childhood.
-
-    These reasons made it impossible for him to go to the war, so he ended up spending a lo of time at home.
-
-    He spent his long days studying law and making a name of himself as a lawyer around town.
-    """
+    n "Arthur had a younger brother, Benjamin. He has leg paralysis from an accident during his childhood."
+    n "These reasons made it impossible for him to go to the war, so he ended up spending a lot of time at home."
+    n "He spent his long days studying law and making a name of himself as a lawyer around town."
     window hide
     nvl clear
     $ renpy.pause (0.5, hard=False)
@@ -81,7 +71,7 @@ label sc02_main:
     a "I know it's hard to believe, but I need your help on this."
     b -sad "And what exactly do you expect me to do?"
     b conf "Are you trying to make me help you hide a murder? To go bury a body somewhere?"
-    a "No, Ben... Even if I wanted to, I can't do it yet."
+    a "No... Even if I wanted to, I can't do it yet."
     b -conf "What do you mean 'not yet'?"
     a sad ". . ."
     b "You jumped again, didn't you."
@@ -114,40 +104,19 @@ label sc02_main:
     b -sad "Where will you go investigate?"
     a "I'll go check out the toy store and find any information on the lion."
     a "You go ask about the 'Arbre Bleu' perfume at that popular store."
-    a "Let's meet at Black Royal Cat Hotel by 2:00 p.m. Got it?"
+    a "Let's meet at Black Royal Cat Hotel by 2 p.m. Got it?"
     b "Yes, I'm just writing down the name of the perfume."
     a "Alright, I'll hang up then."
-    a sad "... Thank you again, Ben. Truly."
-    b happy "... Go on. I'll meet you later."
+    a sad "... Thank you again, Benji. Truly."
+    b happy "..."
+    b -happy "Go on. I'll meet you later."
     b angry "Do NOT be late."
+    stop music fadeout 1.0
+    $ quick_menu = False
     hide arthur
     hide ben
-    $ quick_menu = False
-    stop music fadeout 1.0
-    scene white
-    with fade
-    $ renpy.pause (2, hard=True)
-    window show
-    n """
-
-    Hello, thank you so much for playing our prologue!
-
-    This is what we could finish on time for the jam, but we will release the full story soon.
-
-    We already have the entire plot, art, and music... now we just need to script it all together.
-
-    """
-    nvl clear
-    n """
-
-    So, make sure to keep an eye out for updates on the chapters.
-
-    Until next time! :)
-
-    """
-    window hide
-    nvl clear
-    with fade
-    $ renpy.pause (2, hard=True)
+    scene black
+    with Dissolve(2)
+    $ renpy.pause (5, hard=True)
 
     return
