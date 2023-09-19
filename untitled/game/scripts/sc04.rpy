@@ -17,7 +17,7 @@ label sc04_main:
     a -conf "... Well then, did you find out anything?"
     b "Nothing of much relevance yet."
     b "I was able to look through the boutique's records and found a possible lead for the perfume."
-    b angry "...Unfortuntely, they won't be easy to deal with."
+    b angry "...Unfortunately, they won't be easy to deal with."
     b -angry "Surely you had more luck than I did?"
     a sad "Not exactly... The toy is from before the war, so the company doesn't exist anymore."
     a -sad "A man that collected toys had just sold the last one to a woman shortly before my arrival..."
