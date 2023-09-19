@@ -70,20 +70,9 @@ label sc04_main:
     stop sound fadeout 1.0
     stop music fadeout 1.0
     hide ben
-
-    scene white
-    with fade
-    $ renpy.pause (1, hard=True)
-    n """
-    Hello once again. Thank you for playing the next part of MURDRUM!
-
-    Things are heating up between the Walker brothers. How will this affect the investigation?
-
-    Next update will include the reveal and the final part. Please keep an eye out for it! :)
-    """
-    window hide
     nvl clear
-    with fade
-    $ renpy.pause (2, hard=True)
+    scene black
+    with Dissolve(2)
+    $ renpy.pause (4, hard=True)
 
     return

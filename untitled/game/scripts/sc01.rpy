@@ -47,7 +47,6 @@ label sc01_main:
 
     scene sc_alley
     with Dissolve(2)
-    play sound s06 volume 0.6
     n "Arthur lit up a cigar and observed the dark sky for a moment."
     n "The night was illuminated by stars and flickering street lamps."
     n "Perfect for walking a couple blocks and showing the way back home."
@@ -153,7 +152,7 @@ label sc01_ticket:
     "{i}I swore to never do this again, but I have no choice here.{/i}"
     stop music fadeout 0.3
     a angry "Come on, focus.... it's now or never!"
-    play sound s07
+    play sound s06
     hide arthur
     scene white
     with flash

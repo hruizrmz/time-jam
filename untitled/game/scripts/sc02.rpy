@@ -30,7 +30,7 @@ label sc02_main:
     "Operator" "Good day, who shall I connect you to?"
     a "Hey, connect me to Mr. Benjamin Walker, please."
     "Operator" "Sure thing, please hold."
-    play sound s08 volume 0.7
+    play sound s07 volume 0.7
     scene sc_phone
     with Dissolve(2)
     $ renpy.pause (0.5, hard=False)

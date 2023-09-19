@@ -26,7 +26,7 @@ label sc03a_main:
     $ quick_menu = False
     $ renpy.pause (0.5, hard=True)
 
-    play sound s10 volume 0.6
+    play sound s08 volume 0.6
     hide arthur
     scene black
     with Dissolve(1)
@@ -37,7 +37,6 @@ label sc03a_main:
     n "Near the entrance, there was a long glass case filled with toys that looked even more antique."
     window hide
     nvl clear
-    play sound s06 volume 0.6
     scene sc_toys
     with Dissolve(2)
     $ quick_menu = True
@@ -56,8 +55,8 @@ label sc03a_main:
     tm "Let me go see if there's anything on the back..."
     ". . ."
     tm "I must apologize, Mr. Walker. I recently sold the last model to a pretty lady; three hours ago as a matter of fact."
-    tm "She seemed quite keen on it too. She shared that she would repay a friend for gifting it to her at a fair once."
-    a happy "A fair, eh? It's been so long since I've been to one."
+    tm "She seemed quite keen on it too. She shared that she would repay a friend for gifting it to her at a carnival once."
+    a happy "A carnival, eh? It's been so long since I've been to one."
     stop music fadeout 0.6
     a "Not since..."
     $ quick_menu = False
@@ -72,11 +71,11 @@ label sc03a_main:
     call screen mem_01 with Dissolve(1)
 
 label sc03a_mem:
-    play sound s12 volume 0.6
+    play sound s10 volume 0.6
     show cat mem at ctr
     with flash
     $ renpy.pause (1.5, hard=True)
-    n "A flashing memory of a day at the fair with a girl came back to Arthur after the Toymaker's remark."
+    n "A flashing memory of a day at the carnival with a girl came back to Arthur after the Toymaker's remark."
     n "He recalled a promise involving a big teddy bear wearing a blue ribbon; but with whom?"
     n "The promise was never fulfilled, as Arthur recalls winning something else instead."
     window hide
@@ -94,7 +93,7 @@ label sc03a_mem:
     show toymaker at rightNPC
     with Dissolve(0.1)
     $ quick_menu = True
-    "{i}The fair...{/i}"
+    "{i}The carnival...{/i}"
     play music som fadein 1.5 volume 0.8
     a happy "That's it!"
     a -happy "I'd like to stay and chat but I have to go, immediately."

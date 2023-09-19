@@ -18,11 +18,11 @@ label sc03b_main:
     show ben at ctr
     with Dissolve(0.1)
     b happy "Here, you can keep the change. Thank you for the ride."
-    play sound s13 volume 0.5
     "Taxi driver" "Wow..! By all means, thank you, sir!"
     "Taxi driver" "Should I help you out of the car?"
     b "There's no need. That's what the cane is for. Enjoy the rest of your day."
     "Taxi driver" "Understood. You too, sir."
+    play sound s11 volume 0.5
     play music inve fadein 1.0 volume 0.8
     b conf "This place really is as big as I remembered, even from the outside."
     b -conf "I can already smell the perfumes too..."
@@ -56,7 +56,7 @@ label sc03b_main:
     cl "And... here. This is the current date. As you can see, there are no recent 'Arbre Bleu' purchases."
     b -conf "Hmm, would you mind if I took a closer look to confirm this?"
     cl "By all means, it's all yours."
-    play sound s14 volume 0.5
+    play sound s12 volume 0.5
     "{i}Alright, this week is definitely empty. Seems like the most recent sale was as far as four weeks ago.{/i}"
     "{i}... Interesting.{/i}"
     b "Excuse me, the name 'John McKellen' shows up a lot in here."

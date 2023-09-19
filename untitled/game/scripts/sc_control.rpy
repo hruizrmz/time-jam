@@ -37,11 +37,15 @@ label start_01:
     jump start_02
 
 label start_02:
-    call sc03a_main from _call_sc03a_main
+    call sc05a_main from _call_sc05a_main
 
-    call sc03b_main from _call_sc03b_main
+    #call sc03a_main from _call_sc03a_main
 
-    call sc04_main from _call_sc04_main
+    #call sc03b_main from _call_sc03b_main
+
+    #call sc04_main from _call_sc04_main
+
+    #call sc05a_main from _call_sc05a_main
 
     # This ends the game.
     return

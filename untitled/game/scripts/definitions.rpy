@@ -88,17 +88,24 @@ define audio.s02 = "audio/sfx/02.mp3"
 define audio.s03 = "audio/sfx/03.mp3"
 define audio.s04 = "audio/sfx/04.mp3"
 define audio.s05 = "<from 0 to 2>audio/sfx/05.mp3"
-define audio.s06 = "<from 0 to 2>audio/sfx/06.mp3"
-define audio.s07 = "audio/sfx/07.mp3"
+define audio.s06 = "audio/sfx/06.mp3"
+
+define audio.s07 = "<from 0 to 3>audio/sfx/07.mp3"
 define audio.s08 = "<from 0 to 3>audio/sfx/08.mp3"
 define audio.s09 = "audio/sfx/09.mp3"
-define audio.s10 = "<from 0 to 3>audio/sfx/10.mp3"
-## agregar caja
+define audio.s10 = "audio/sfx/10.mp3"
+define audio.s11 = "<from 2>audio/sfx/11.mp3"
 define audio.s12 = "audio/sfx/12.mp3"
-define audio.s13 = "<from 2>audio/sfx/13.mp3"
+define audio.s13 = "<from 0 to 2>audio/sfx/13.mp3"
 define audio.s14 = "audio/sfx/14.mp3"
+define audio.s15 = "audio/sfx/15.mp3"
+define audio.s16 = "audio/sfx/16.mp3"
+define audio.s17 = "audio/sfx/17.mp3"
+define audio.s18 = "audio/sfx/18.mp3"
 
 define audio.rest = "<loop 0>audio/sfx/rest.mp3"
+define audio.train = "<loop 0>audio/sfx/train.mp3"
+define audio.carnival = "<loop 0>audio/sfx/carnival.mp3"
 #####################################################################
 
 ## Transforms #############################################################
